@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/Header";
 import CardPrato from "./components/CardPrato";
 import pratos from "./data";
 
@@ -9,15 +8,18 @@ export default function App() {
   }
 
   return (
-    <div>
-      <Header />
-      {pratos.map((prato) => (
-        <CardPrato
-          key={prato.id}
-          prato={prato}
-          onAdicionar={() => adicionarPrato(prato)}
-        />
-      ))}
+    <div className="container py-4">
+      <h2 style={{ fontFamily: "'Playfair Display', serif" }}>Cardápio</h2>
+      <div className="row g-4">
+        {pratos.map((prato) => (
+          <div className="col-12 col-md-6 col-lg-4" key={prato.id}>
+            <CardPrato
+              prato={prato}
+              onAdicionar={() => adicionarPrato(prato)}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
