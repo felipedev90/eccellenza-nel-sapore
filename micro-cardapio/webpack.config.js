@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
   mode: "development",
@@ -21,6 +22,14 @@ module.exports = {
     ],
   },
   plugins: [
+    new ModuleFederationPlugin({
+      name: "micro_cardapio",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./MicroCardapio": "./src/App",
+      },
+      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+    }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
