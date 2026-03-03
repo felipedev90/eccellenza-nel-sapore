@@ -1,9 +1,13 @@
-import React from "react";
+import React, { Suspense } from "react";
+
+const MicroCardapio = React.lazy(() => import("micro_cardapio/MicroCardapio"));
+const MicroPedido = React.lazy(() => import("micro_pedido/MicroPedido"));
 
 export default function App() {
   return (
-    <div>
-      <h1>Container App</h1>
-    </div>
+    <Suspense fallback={<div>Carregando...</div>}>
+      <MicroCardapio />
+      <MicroPedido />
+    </Suspense>
   );
 }
