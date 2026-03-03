@@ -1,3 +1,14 @@
+/**
+ * data.js - Base de dados estática dos pratos
+ *
+ * Array de objetos que representa o cardápio do restaurante.
+ * Cada prato possui id, nome, descrição, preço e caminho da imagem.
+ *
+ * As imagens são servidas pelo próprio micro-cardapio (localhost:3001),
+ * usando caminho absoluto para funcionar tanto isolado quanto
+ * integrado no container.
+ */
+
 const pratos = [
   {
     id: 1,

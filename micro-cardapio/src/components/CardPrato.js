@@ -1,3 +1,13 @@
+/**
+ * CardPrato.js - Componente reutilizável de card de prato
+ *
+ * Exibe as informações de um prato individual (imagem, nome,
+ * descrição, preço) com um botão para adicionar ao pedido.
+ *
+ * @param {Object} prato - Objeto com dados do prato
+ * @param {Function} onAdicionar - Callback executado ao clicar em "Adicionar"
+ */
+
 import React from "react";
 
 export default function CardPrato({ prato, onAdicionar }) {
