@@ -185,6 +185,19 @@ React e ReactDOM são configurados como `singleton: true` em todos os micros par
 | `App.js`      | Gerencia o estado do carrinho e escuta eventos  |
 | `Carrinho.js` | Exibe os itens adicionados com opção de remover |
 
+## O que aprendi
+
+- Configurar **Webpack e Babel do zero**, sem depender do Create React App, entendendo o papel de cada dependência (loaders, plugins, presets)
+- O conceito de **Micro Frontends**: dividir o frontend em aplicações independentes, cada uma com sua responsabilidade, build e deploy próprios
+- Configurar o **Webpack Module Federation** com os papéis de Host (Container) e Remote (Micros), expondo e consumindo módulos em tempo de execução
+- Usar **React.lazy e Suspense** para importação dinâmica de componentes remotos
+- Implementar comunicação desacoplada entre micros usando **Custom Events** no window (dispatchEvent + addEventListener)
+- A importância do **import dinâmico** (`import()`) no ponto de entrada para que o Module Federation resolva as dependências compartilhadas antes da inicialização
+- Compartilhar dependências como React e ReactDOM com **singleton: true** para evitar duplicação e bugs
+- Que cada micro deve **funcionar isoladamente** antes de ser integrado ao container
+- Servir **assets estáticos** (imagens) a partir do micro de origem, usando caminhos absolutos para funcionar dentro do container
+- Aplicar **Bootstrap via CDN** no React, respeitando as diferenças de sintaxe (className em vez de class)
+
 ## Autor
 
 Desenvolvido por **Felipe Augusto**
