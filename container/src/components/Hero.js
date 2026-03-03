@@ -1,3 +1,14 @@
+/**
+ * Hero.js - Seção hero da página principal
+ *
+ * Exibe uma imagem de destaque com texto sobreposto.
+ * O texto é posicionado sobre a imagem usando position-absolute
+ * com fundo semi-transparente para legibilidade.
+ *
+ * O tamanho da fonte usa clamp() para se adaptar automaticamente
+ * a diferentes tamanhos de tela sem media queries.
+ */
+
 import React from "react";
 
 export default function Hero() {

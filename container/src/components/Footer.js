@@ -1,3 +1,10 @@
+/**
+ * Footer.js - Rodapé da aplicação
+ *
+ * Componente global do container com informações de copyright
+ * e créditos do desenvolvedor.
+ */
+
 import React from "react";
 
 export default function Footer() {

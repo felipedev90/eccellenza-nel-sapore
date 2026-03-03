@@ -1,3 +1,14 @@
+/**
+ * Header.js - Componente de cabeçalho da aplicação
+ *
+ * Componente global do container que exibe o nome do restaurante
+ * e a tagline. Fica fixo no topo da página (sticky-top).
+ *
+ * Layout responsivo:
+ * - Mobile: textos centralizados, empilhados
+ * - Desktop (lg+): nome à esquerda, tagline à direita
+ */
+
 import React from "react";
 
 export default function Header() {
