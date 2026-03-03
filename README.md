@@ -16,19 +16,19 @@ eccellenza-nel-sapore/
 ### Diagrama
 
 ```
-┌─────────────────────────────────────────────────┐
-│                 CONTAINER (Host)                │
-│                 localhost:3000                   │
-│                                                 │
+┌────────────────────────────────────────────────┐
+│                 CONTAINER (Host)               │
+│                 localhost:3000                 │
+│                                                │
 │  ┌─────────────┐         ┌─────────────┐       │
-│  │    MICRO     │  Event  │    MICRO     │       │
+│  │    MICRO    │  Event  │    MICRO    │       │
 │  │  CARDÁPIO   │ ──────> │   PEDIDO    │       │
 │  │  (Remote)   │         │  (Remote)   │       │
 │  │  :3001      │         │  :3002      │       │
 │  └─────────────┘         └─────────────┘       │
-│                                                 │
-│  Shared: React, ReactDOM (singleton)            │
-└─────────────────────────────────────────────────┘
+│                                                │
+│  Shared: React, ReactDOM (singleton)           │
+└────────────────────────────────────────────────┘
 ```
 
 ## Tecnologias
