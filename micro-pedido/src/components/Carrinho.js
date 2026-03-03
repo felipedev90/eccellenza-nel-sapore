@@ -1,6 +1,18 @@
+/**
+ * Carrinho.js - Componente reutilizável do carrinho de compras
+ *
+ * Exibe a lista de pratos adicionados ao pedido com imagem,
+ * nome, preço e botão de remover. Retorna null quando o
+ * carrinho está vazio para não ocupar espaço na tela.
+ *
+ * @param {Array} carrinho - Array de objetos de pratos no carrinho
+ * @param {Function} onRemover - Callback para remover item pelo índice
+ */
+
 import React from "react";
 
 export default function Carrinho({ carrinho, onRemover }) {
+  // Retorna null se o carrinho estiver vazio para não renderizar nada
   if (carrinho.length === 0) return null;
 
   return (
